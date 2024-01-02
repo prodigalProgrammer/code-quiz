@@ -1,8 +1,43 @@
 const questionArr = [
   "In JavaScript, what element is used to store and manipulate text, usually in multiples?",
   "What is the name of the object that allows you to perform mathematical tasks with the interpreter?",
+  "What is the name of the statement that is used to exit or end a loop?",
+  "What is the format called that is used for storing and transporting data?",
+  "What are the identifiers called that cannot be used as variables or function names?",
+  "What elements are used to test for TRUE or False values stored in variables?",
+  "What can loops offer JavaScript code as a whole?",
+  "Inside which HTML element do we put the JavaScript?",
+  "Which attribute needs to be changed to make elements invisible?",
+  "JavaScript is an _________ language",
+  "When an operator’s value is NULL, the typeof returned by the unary operator is:",
+  "Which of the following are closures in Javascript?",
 ];
 const answerArr = [
   ["Variables", "Recorders", "Arrays", "Strings"],
   ["Solve", "Number", "Count", "Math"],
+  [
+    "Falter Statement",
+    "Break Statement",
+    "Conditional Statement",
+    "Close Statement",
+  ],
+  ["Syntax", "Font", "HTML", "JSON"],
+  ["Concrete Terms", "Constants", "Favourites", "Reserved Words"],
+  [
+    "Trigger Readers",
+    "Regular Expresions",
+    "Conditional Statements",
+    "Comparison & Logical Operators",
+  ],
+  [
+    "Cleaner Syntax",
+    "Cross-Platform Support",
+    "Improved Performance",
+    "Added Plug-ins",
+  ],
+  ["<scripting>", "<javascript>", "<js>", "<script>"],
+  ["visibility", "visible", "invisibility", "invisible"],
+  ["Object-Based", "Object-Oriented", "Procedural", "None of the above"],
+  ["Boolean", "Undefined", "Object", "Integer"],
+  ["Variables", "Functions", "Objects", "All of the above"],
 ];

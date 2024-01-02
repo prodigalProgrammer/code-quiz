@@ -3,9 +3,11 @@ var startScreen = document.querySelector("#start-screen");
 var questionScreen = document.querySelector("#questions");
 var question = document.querySelector("#question-title");
 var choices = document.querySelector("#choices");
+var result = document.querySelector("#result");
 var count = 0;
 
 function choiceButtons() {
+  
   for (var i = 0; i < 4; ++i) {
     var choice = document.createElement("button");
     choice.textContent = `${i + 1}. ${answerArr[count][i]}`;
