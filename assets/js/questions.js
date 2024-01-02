@@ -9,7 +9,7 @@ const questionArr = [
   "Inside which HTML element do we put the JavaScript?",
   "Which attribute needs to be changed to make elements invisible?",
   "JavaScript is an _________ language",
-  "When an operator’s value is NULL, the typeof returned by the unary operator is:",
+  "When an operator's value is NULL, the typeof returned by the unary operator is:",
   "Which of the following are closures in Javascript?",
 ];
 const answerArr = [
