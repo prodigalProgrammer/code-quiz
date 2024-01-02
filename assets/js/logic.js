@@ -6,6 +6,10 @@ var choices = document.querySelector("#choices");
 var result = document.querySelector("#result");
 var count = 0;
 var timer = document.querySelector("#time");
+var time = 75;
+var endScreen = document.querySelector("#end-screen");
+var score = document.querySelector("#final-score");
+var bonus = 0;
 
 start.addEventListener("click", function (event) {
   event.preventDefault();
@@ -17,18 +21,35 @@ start.addEventListener("click", function (event) {
     choice.setAttribute("data-index", i + 1);
   }
   timer.textContent = "75";
+  startCountdown();
   createChoices();
 });
 
+function startCountdown() {
+  countdown = setInterval(function () {
+    time--;
+    timer.textContent = time;
+    if (result.textContent === "Incorrect!") {
+      time -= 10;
+    }
+    if (time > 0 && count === 12) {
+      clearInterval(countdown);
+      gameWon();
+    }
+    if (time <= 0) {
+      clearInterval(countdown);
+      gameLost();
+    }
+  }, 1000);
+}
+
 function createChoices() {
   if (count < 12) {
-    question.textContent = `${questionArr[count]}`;
+    question.textContent = `Q${count + 1}. ${questionArr[count]}`;
     for (var x = 0; x < 4; x++) {
       var buttons = choices.querySelectorAll("button");
       buttons[x].textContent = `${x + 1}. ${answerArr[count][x]}`;
     }
-  } else {
-    alert("Quiz FINISHED!!!!!");
   }
 }
 
@@ -63,7 +84,7 @@ choices.addEventListener("click", function (event) {
       incorrect();
     }
   }
-  setTimeout(() => (result.textContent = ""), 1500);
+  setTimeout(() => (result.textContent = ""), 1000);
   count++;
   createChoices();
 });
@@ -71,8 +92,20 @@ choices.addEventListener("click", function (event) {
 function correct() {
   result.setAttribute("class", "correct");
   result.textContent = "Correct!";
+  bonus += 5;
 }
 function incorrect() {
   result.setAttribute("class", "incorrect");
   result.textContent = "Incorrect!";
+}
+
+function gameWon() {
+  questionScreen.classList.add("hide");
+  endScreen.classList.remove("hide");
+  score.textContent = time + bonus;
+}
+function gameLost() {
+  questionScreen.classList.add("hide");
+  endScreen.classList.remove("hide");
+  score.textContent = time + bonus;
 }
