@@ -6,7 +6,7 @@
 
 In this project I was required to build a quiz centered around coding.
 
-_Find the link to the the deployed website [here](https://prodigalprogrammer.github.io/password-generator/)_
+_Find the link to the the deployed website [here](https://prodigalprogrammer.github.io/code-quiz/)_
 
 <p align="right">(<a href="#coding-quiz" >Back to top</a>)</p>
 
