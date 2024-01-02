@@ -10,6 +10,8 @@ var time = 75;
 var endScreen = document.querySelector("#end-screen");
 var score = document.querySelector("#final-score");
 var bonus = 0;
+var hiScoreButton = document.querySelector("#submit");
+var initials = document.querySelector("#initials");
 
 start.addEventListener("click", function (event) {
   event.preventDefault();
@@ -83,10 +85,10 @@ choices.addEventListener("click", function (event) {
     } else {
       incorrect();
     }
+    setTimeout(() => (result.textContent = ""), 1000);
+    count++;
+    createChoices();
   }
-  setTimeout(() => (result.textContent = ""), 1000);
-  count++;
-  createChoices();
 });
 
 function correct() {
@@ -109,3 +111,5 @@ function gameLost() {
   endScreen.classList.remove("hide");
   score.textContent = time + bonus;
 }
+
+hiScoreButton.addEventListener("click", function (event) {});
